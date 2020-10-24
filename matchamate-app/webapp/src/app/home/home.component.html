@@ -1,0 +1,67 @@
+<div class="container mt-3">
+  <div class="bg-light p-4">
+    <h2>Rechercher une session de jeu</h2>
+    <hr />
+    <h3>Filtres:</h3>
+    <div class="row justify-content-center mt-3">
+      <div class="col-12 col-sm-6 col-xl-3 form-inline mb-2">
+        <select
+          id="region"
+          class="form-control w-100"
+          (click)="onRegionChange($event.target.value)"
+        >
+          <option value="" selected>Toutes les régions</option>
+          <option [value]="region.code" *ngFor="let region of regionList">
+            {{ region.nom }}
+          </option>
+        </select>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 form-inline mb-2">
+        <select
+          id="departement"
+          class="form-control w-100"
+          (click)="onDepartementChange($event.target.value)"
+        >
+          <option value="" selected>Tout les départements</option>
+          <option
+            [value]="departement.code"
+            *ngFor="let departement of queriedDepartementList"
+          >
+            {{ departement.nom }}
+          </option>
+        </select>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 form-inline mb-2">
+        <select
+          id="place"
+          class="form-control w-100"
+          (click)="onCompanyChange($event.target.value)"
+        >
+          <option value="" selected>Tout les lieux</option>
+          <option
+            [value]="company.name"
+            *ngFor="let company of queriedCompanyList"
+          >
+            {{ company.name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 form-inline mb-2">
+        <select id="level" class="form-control w-100" (click)="onLevelChange($event.target.value)">
+          <option value="" selected>Tout niveaux</option>
+          <option value="Débutant">Débutant</option>
+          <option value="Intermédiaire">Intermédiaire</option>
+          <option value="Confirmé">Confirmé</option>
+        </select>
+      </div>
+    </div>
+    <hr />
+    <app-session-view
+      *ngFor="let session of sessions"
+      [session]="session"
+      [bookingEnabled]="bookingEnabled"
+      [quitEnabled]="quitEnabled"
+    >
+    </app-session-view>
+  </div>
+</div>
