@@ -2,7 +2,7 @@
 
 ## Présentation
 
-Match a Mate est une application web  de mise en relation de partenaires pour pratiquer les sport de raquettes. Les sports représentés sont le badminton, le tennis, le padel et le squash. L'application permet aux joueurs de s'inscrire sur des créneaux de jeux proposés par des entreprise mettant à disposition les infrastructure permettant de jouer. Cette application a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
+Match a Mate est une application web  de mise en relation de partenaires pour pratiquer les sport de raquettes. Les sports représentés sont le badminton, le tennis, le padel et le squash. L'application permet aux joueurs de s'inscrire sur des créneaux de jeux proposés par des entreprises mettant à disposition les infrastructures permettant de jouer. Cette application a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
 
 ## Guide de démarrage
 
